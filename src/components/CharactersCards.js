@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import "./Cards.css";
 
 const CharactersCards = ({ character }) => (
   <div className="card-character">
-    <img src={character.image} alt="character"></img>
+    <img src={character.img} alt="character"></img>
     <div className="card-character-footer">
       <p className="card-texts">Nombre: {character.name}</p>
       <p className="card-texts">Apodo: {character.nickname} </p>
@@ -13,8 +12,3 @@ const CharactersCards = ({ character }) => (
   </div>
 );
 export default CharactersCards;
-=======
-export default function CharactersCards() {
-  return;
-}
->>>>>>> d00d9c9e86acfa162cb25c4ed8da4c920ac5830c
