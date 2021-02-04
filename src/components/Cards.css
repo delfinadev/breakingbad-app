@@ -1,0 +1,26 @@
+.card-character{
+    width: 18rem;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 5px 0px rgba(73, 71, 71, 0.35);
+    
+}
+
+.card-character img{
+    width: 100%;
+}
+ 
+.card-character-footer{
+    background-color: black;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card-texts{
+    color: rgb(61, 199, 68);
+}

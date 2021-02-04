@@ -25,7 +25,7 @@ export default function Character() {
           {characters.map((character, cards) => {
             return (
             <CharactersCards key={cards} character={character} />,
-          )}
+            )}
         </div>
       ) : (
         <p>Cargando....</p>
