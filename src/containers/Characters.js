@@ -1,40 +1,39 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CharactersCards from "./CharactersCards.js"
+import CharactersCards from "../components/CharactersCards";
+import Button from "../components/Button";
+import Spinner from "./../components/Spinner/Spinner";
 
 export default function Character() {
   const [characters, setCharacters] = useState([]);
-  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let url = "https://www.breakingbadapi.com/api/characters";
     axios.get(url).then((response) => {
-      setCharacters(response.data);
+      setTimeout(() => {
+        setCharacters(response.data);
+        setLoading(false);
+      }, 2000);
     });
   }, []);
 
   return (
     <>
-  <div style="background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/breaking-bad-resumen-cinco-temporadas-1570700511.jpg);">
-      <h1>Todos los personajes </h1>
+      <div>
+        <h1>Todos los personajes </h1>
       </div>
-      {/* <Button /> */}
+      <Button path={"/"} content={"Back to Home"} className={"btn"} />
 
-      {characters ? ( 
-      <div className="personajes-container">
-          {characters.map((character, cards) => {
-            return (
-            <CharactersCards key={cards} character={character} />,
-            )}
-        </div>
+      {loading ? (
+        <Spinner />
       ) : (
+        <div className="episodes-container">
+          {characters.map((character, index) => {
+            return <CharactersCards key={index} character={character} />;
+          })}
+        </div>
       )}
     </>
-
-
-
-
-
-
   );
 }

@@ -1,7 +1,7 @@
-import Cards.css from "./Cards.css";
+import "./Cards.css";
 
-export default function EpisodesCards({ episode }) {
-  const { title, season, air_date, episode, } = episodio;
+export default function EpisodesCards({ episodio }) {
+  const { title, season, air_date, episode } = episodio;
   return (
     <>
       <div className="card-character">

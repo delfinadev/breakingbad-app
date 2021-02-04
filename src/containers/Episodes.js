@@ -3,8 +3,7 @@ import axios from "axios";
 import EpisodesCards from "../components/EpisodesCards";
 import Button from "../components/Button";
 import Spinner from "./../components/Spinner/Spinner";
-import Cards.css from "./Cards.css";
-
+import "../components/Cards.css";
 
 export default function Episodes() {
   const [episodes, setEpisodes] = useState([]);
