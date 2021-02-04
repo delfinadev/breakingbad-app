@@ -11,5 +11,21 @@ export default function Episodes() {
     });
   }, []);
 
-  return <> </>;
+  return <> 
+  
+  <div style="background-image: url(https://images.amcnetworks.com/amc.com/wp-content/uploads/2012/06/BB-S5-Key-Art-2560-v2.jpg);">
+      <h1>Todos los personajes </h1>
+      </div>
+      {/* <Button /> */}
+
+      {characters ? ( 
+      <div className="episodes-container">
+          {episodes.map((episodes, cards) => {
+            return <EpisodesCards key={cards} episode={episode} />;
+          })}
+        </div>
+      ) : (
+        <p>Cargando....</p>
+      )}
+  </>;
 }
