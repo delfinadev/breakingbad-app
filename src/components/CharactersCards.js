@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./Cards.css";
 
 const CharactersCards = ({ character }) => (
@@ -12,3 +13,8 @@ const CharactersCards = ({ character }) => (
   </div>
 );
 export default CharactersCards;
+=======
+export default function CharactersCards() {
+  return;
+}
+>>>>>>> d00d9c9e86acfa162cb25c4ed8da4c920ac5830c
