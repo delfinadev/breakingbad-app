@@ -1,7 +1,7 @@
 import "./Cards.css";
 
 export default function EpisodesCards({ episodio }) {
-  const { title, season, air_date, episode } = episodio;
+  const { title, season, air_date, episode, image } = episodio;
   return (
     <>
       <div className="card-character">
