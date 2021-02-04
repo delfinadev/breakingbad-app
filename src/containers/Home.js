@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import './home.css'
+import {useEffect, useState} from 'react'
+import axios from 'axios'
+import "./home.css";
 
 export default function Home(params) {
   const [character, setCharacter] = useState([])
