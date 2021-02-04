@@ -3,20 +3,21 @@ import axios from "axios";
 import "./home.css";
 
 export default function Home(params) {
-  const [character, setCharacter] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [personaje, setPersonaje] = useState([]);
-  console.log("🚀 ~ file: Home.js ~ line 8 ~ Home ~ personaje", personaje);
 
   useEffect(() => {
     let url = `https://www.breakingbadapi.com/api/characters?name=${personaje}`;
     axios.get(url).then((response) => {
-      setCharacter(response);
+      setCharacters(response);
     });
   }, [personaje]);
 
   function getValue(e) {
-    setPersonaje(e);
+    setPersonaje(e.target.value);
+    e.preventDefault();
   }
+  console.log(characters.data);
 
   return (
     <>
@@ -31,6 +32,13 @@ export default function Home(params) {
             placeholder="Busca tu personaje favorito"
             onChange={(e) => getValue(e.target.value)}></input>
         </form>
+        {characters.data === undefined ? (
+          <div></div>
+        ) : (
+          characters.data
+            .splice(0, 3)
+            .map((character) => <h1>{character.name}</h1>)
+        )}
         <div className="container-episodios">
           <p>Visita todos los episodios</p>
         </div>
