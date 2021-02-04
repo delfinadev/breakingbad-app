@@ -1,11 +1,10 @@
-import "./Cards.css";
+import Cards.css from "./Cards.css";
 
-export default function EpisodesCards({ episodio }) {
-  const { title, season, air_date, episode, image } = episodio;
+export default function EpisodesCards({ episode }) {
+  const { title, season, air_date, episode, } = episodio;
   return (
     <>
       <div className="card-character">
-        <img src="" alt="img episodes"></img>
         <div className="card-character-footer">
           <p className="card-texts">Nombre del Espisodio: {title}</p>
           <p className="card-texts">Dia de Estreno: {air_date}</p>

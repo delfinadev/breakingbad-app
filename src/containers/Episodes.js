@@ -3,6 +3,8 @@ import axios from "axios";
 import EpisodesCards from "../components/EpisodesCards";
 import Button from "../components/Button";
 import Spinner from "./../components/Spinner/Spinner";
+import Cards.css from "./Cards.css";
+
 
 export default function Episodes() {
   const [episodes, setEpisodes] = useState([]);
@@ -20,7 +22,7 @@ export default function Episodes() {
 
   return (
     <>
-      <div>
+      <div className="episodes-page-title">
         <h1>Todos los personajes </h1>
       </div>
       <Button path={"/"} content={"Back to Home"} className={"btn"} />
