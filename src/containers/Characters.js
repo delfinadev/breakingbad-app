@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./CharactersCards.js";
+
+import CharactersCards from "../components/CharactersCards";
 
 export default function Character() {
   const [characters, setCharacters] = useState([]);
@@ -20,21 +21,10 @@ export default function Character() {
       {/* <Button /> */}
 
       <div className="personajes-container">
-<<<<<<< HEAD
-          {characters.map((character, cards) => {
-            return (
-            <CharactersCards key={cards} character={character} />,
-            )}
-        </div>
-      ) : (
-        <p>Cargando....</p>
-      )}
-=======
         {characters.map((character, cards) => {
           return <CharactersCards key={cards} character={character} />;
         })}
       </div>
->>>>>>> d00d9c9e86acfa162cb25c4ed8da4c920ac5830c
     </>
   );
 }
