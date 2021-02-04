@@ -18,7 +18,6 @@ export default function Home(params) {
     setPersonaje(e.target.value);
   }
   
-console.log(characters.data)
   return (
     <>
       <div className="header-home">
@@ -30,16 +29,18 @@ console.log(characters.data)
             type="text"
             className="container-search-input"
             placeholder="Busca tu personaje favorito"
-            onChange={getValue}></input>
+            onChange={e => getValue(e)}></input>
         </form>
-        {characters.data === undefined ? (
+        <div className="container-search-card">
+        {characters.data === undefined || personaje.length === 0? (
           <div></div>
         ) : (
           characters.data
-            .splice(0, 3)
-            .map(character => {return ( <CharactersCards character={character} />)})
-            
+            .map(character => {return (<CharactersCards character={character} />
+            )})
+            .splice(0, 3)     
         )}
+        </div>
         <div className="container-episodios">
           <p>Visita todos los episodios</p>
         </div>
