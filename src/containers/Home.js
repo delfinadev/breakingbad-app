@@ -1,18 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import './home.css'
+import "./home.css";
 
 export default function Home(params) {
-  const [character, setCharacter] = useState([])
-
-  // useEffect(()=> {
-  //   let url = 'https://www.breakingbadapi.com/api/characters?name=Walter+White'
-  //   axios.get(url).then((response) => {
-  //     setCharacter(response);
-  //     console.log(response)
-  //   });
-  // }, [])
-
   return (
     <>
       <div className="header-home">
@@ -20,7 +8,9 @@ export default function Home(params) {
       </div>
       <div className="main-home">
         <form className="container-search">
-          <input className="container-search-input" placeholder="Busca tu personaje favorito"></input>
+          <input
+            className="container-search-input"
+            placeholder="Busca tu personaje favorito"></input>
         </form>
         <div className="container-episodios">
           <p>Visita todos los episodios</p>
