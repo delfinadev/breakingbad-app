@@ -3,10 +3,6 @@ import axios from "axios";
 
 export default function Character() {
   const [characters, setCharacters] = useState([]);
-  console.log(
-    "🚀 ~ file: Characters.js ~ line 6 ~ Character ~ characters",
-    characters
-  );
 
   useEffect(() => {
     let url = "https://www.breakingbadapi.com/api/characters";
@@ -17,7 +13,8 @@ export default function Character() {
 
   return (
     <>
-      <h1>hola fede</h1>
+      <h1>Characters</h1>
+      {/* <Button /> */}
     </>
   );
 }
