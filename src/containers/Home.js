@@ -45,8 +45,8 @@ export default function Home(params) {
             <div></div>
           ) : (
             characters.data
-              .map((character) => {
-                return <CharactersCards character={character} />;
+              .map((character, index) => {
+                return <CharactersCards character={character} key={index} />;
               })
               .splice(0, 3)
           )}
