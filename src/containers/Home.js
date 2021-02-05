@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./home.css";
-import CharactersCards from '../components/CharactersCards'
+import CharactersCards from "../components/CharactersCards";
+import Button from "./../components/Button";
 
 export default function Home(params) {
   const [characters, setCharacters] = useState([]);
@@ -15,37 +16,50 @@ export default function Home(params) {
   }, [personaje]);
 
   function getValue(e) {
+    e.preventDefault();
     setPersonaje(e.target.value);
   }
-  
+
   return (
     <>
       <div className="header-home">
-        <h1>Busca tu personaje favorito</h1>
+        <h1>Find your favorite character</h1>
+        <p>Your favorite character is here</p>
+        <Button path={"#input"} content={"Find"} className={"btn btn-small"} />
       </div>
       <div className="main-home">
         <form className="container-search">
           <input
             type="text"
+            id="input"
             className="container-search-input"
             placeholder="Busca tu personaje favorito"
-            onChange={e => getValue(e)}></input>
+            onChange={(e) => getValue(e)}></input>
         </form>
         <div className="container-search-card">
-        {characters.data === undefined || personaje.length === 0? (
-          <div></div>
-        ) : (
-          characters.data
-            .map(character => {return (<CharactersCards character={character} />
-            )})
-            .splice(0, 3)     
-        )}
+          {characters.data === undefined || personaje.length === 0 ? (
+            <div></div>
+          ) : (
+            characters.data
+              .map((character) => {
+                return <CharactersCards character={character} />;
+              })
+              .splice(0, 3)
+          )}
         </div>
         <div className="container-episodios">
-          <p>Visita todos los episodios</p>
+          <Button
+            path={"/episodes"}
+            content={"Visita todo los episodios"}
+            className={"btn"}
+          />
         </div>
         <div className="container-personajes">
-          <p>Visita todos los personajes</p>
+          <Button
+            path={"/characters"}
+            content={"Visita todos los personajes"}
+            className={"btn"}
+          />
         </div>
       </div>
     </>
