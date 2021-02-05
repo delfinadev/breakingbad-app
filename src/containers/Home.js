@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 import "./home.css";
 import CharactersCards from "../components/CharactersCards";
@@ -25,7 +27,9 @@ export default function Home(params) {
       <div className="header-home">
         <h1>Find your favorite character</h1>
         <p>Your favorite character is here</p>
-        <Button path={"#input"} content={"Find"} className={"btn btn-small"} />
+        <Link to="#input">
+          <button className="btn btn-small">Find</button>
+        </Link>
       </div>
       <div className="main-home">
         <form className="container-search">
