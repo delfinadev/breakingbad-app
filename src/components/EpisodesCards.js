@@ -5,6 +5,7 @@ export default function EpisodesCards({ episodio }) {
   return (
     <>
       <div className="card-character">
+        <div className="episodes-page-title"></div>
         <div className="card-character-footer">
           <p className="card-texts">Nombre del Espisodio: {title}</p>
           <p className="card-texts">Dia de Estreno: {air_date}</p>
