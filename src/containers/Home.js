@@ -17,6 +17,10 @@ export default function Home(params) {
     });
   }, [personaje]);
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   function getValue(e) {
     e.preventDefault();
     setPersonaje(e.target.value);
@@ -32,7 +36,7 @@ export default function Home(params) {
         </Link>
       </div>
       <div className="main-home">
-        <form className="container-search">
+        <form className="container-search" onSubmit={handleSubmit}>
           <input
             type="text"
             id="input"
