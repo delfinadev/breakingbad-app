@@ -33,7 +33,7 @@ export default function Home(params) {
             type="text"
             id="input"
             className="container-search-input"
-            placeholder="Busca tu personaje favorito"
+            placeholder="Find your favorite character"
             onChange={(e) => getValue(e)}></input>
         </form>
         <div className="container-search-card">
@@ -50,14 +50,14 @@ export default function Home(params) {
         <div className="container-episodios">
           <Button
             path={"/episodes"}
-            content={"Visita todo los episodios"}
+            content={"Visit all episodes"}
             className={"btn"}
           />
         </div>
         <div className="container-personajes">
           <Button
             path={"/characters"}
-            content={"Visita todos los personajes"}
+            content={"Visit all characters"}
             className={"btn"}
           />
         </div>

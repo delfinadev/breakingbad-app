@@ -4,7 +4,7 @@ import EpisodesCards from "../components/EpisodesCards";
 import Button from "../components/Button";
 import Spinner from "./../components/Spinner/Spinner";
 import "../components/Cards.css";
-import './Episodes.css'
+import "./Episodes.css";
 
 export default function Episodes() {
   const [episodes, setEpisodes] = useState([]);
@@ -23,7 +23,7 @@ export default function Episodes() {
   return (
     <>
       <div className="header-episodes">
-        <h1>Todos los personajes </h1>
+        <h1>All Episodes</h1>
         <Button path={"/"} content={"Back to Home"} className={"btn"} />
       </div>
 

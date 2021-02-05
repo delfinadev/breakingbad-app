@@ -3,7 +3,7 @@ import axios from "axios";
 import CharactersCards from "../components/CharactersCards";
 import Button from "../components/Button";
 import Spinner from "./../components/Spinner/Spinner";
-import './Characters.css'
+import "./Characters.css";
 
 export default function Character() {
   const [characters, setCharacters] = useState([]);
@@ -22,9 +22,9 @@ export default function Character() {
   return (
     <>
       <div className="header-characters">
-        <h1>Todos los personajes </h1>
+        <h1>All Characters </h1>
         <Button path={"/"} content={"Back to Home"} className={"btn"} />
-  </div>
+      </div>
       {loading ? (
         <Spinner />
       ) : (
