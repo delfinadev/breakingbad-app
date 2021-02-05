@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 import axios from "axios";
 import "./home.css";
@@ -27,7 +27,7 @@ export default function Home(params) {
       <div className="header-home">
         <h1>Find your favorite character</h1>
         <p>Your favorite character is here</p>
-        <Link to="#input">
+        <Link to="input" smooth={true} duration={1000}>
           <button className="btn btn-small">Find</button>
         </Link>
       </div>
